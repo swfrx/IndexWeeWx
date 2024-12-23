@@ -1,16 +1,50 @@
 #errorCatcher Echo
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head profile="http://www.w3.org/2005/10/profile">
     <title>$station.location</title>
-    <link rel="stylesheet" type="text/css" href="./Bootstrap/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" type="text/css" href="./Bootstrap/css/bootstrap.min.css" />-->
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          font-size: 14pt;
+          background-color: #ffffff;
+        }
+        h1 {
+          font-size: 120%;
+        }
+        h2 {
+          font-size: 110%;
+        }
+        a:link {
+          text-decoration: underline;
+          color: #207070;
+        }
+        a:hover {
+          text-decoration: underline;
+          color: #30a0a0;
+        }
+        a:visited {
+          text-decoration: underline;
+          color: #207070;
+        }
+        table, td, th {
+          border: 1px solid;
+          border-collapse: collapse;
+          padding: 5px;
+        }
+    </style>
   </head>
 <body style="padding:10px">
 <div>
 <h1>Welcome to $station.location</h1>
 
-<p>This weather station uses <a href="https://weewx.com">WeeWX</a> software and is currently running several skins</p>
+<p>This weather station uses <a href="https://weewx.com">WeeWX</a> software and is running version $station.version. </p>
+
+<p>The Weather Station is a <a href="https://www.foshk.com/wifi_weather_station/wh2650.html">FineOffset $station.hardware Clone</a>.</p>
+
+<p>It is running several skins:</p>
+
 <p>
 <a href="https://github.com/poblabs/weewx-belchertown">Belchertown</a>
 and
