@@ -43,16 +43,14 @@
 
 <p>The Weather Station is a <a href="https://www.foshk.com/wifi_weather_station/wh2650.html">FineOffset $station.hardware Clone</a>.</p>
 
-<p>It is running several skins:</p>
-
-<p>
+<p>The software is running several skins. Two of them,
 <a href="https://github.com/poblabs/weewx-belchertown">Belchertown</a>
 and
-<a href="https://github.com/brewster76/fuzzy-archer">Bootstrap</a>
-both implement interactive charts,
-Belchertown with <a href="https://www.highcharts.com/">HighCharts</a>
+<a href="https://github.com/brewster76/fuzzy-archer">Bootstrap</a>, implement interactive charts.</p>
+
+<p>Belchertown uses <a href="https://www.highcharts.com/">HighCharts</a>
 and
-Bootstrap with <a href="https://v0.lvcharts.com/">Live Charts</a>
+Bootstrap <a href="https://v0.lvcharts.com/">Live Charts</a>
 .</p>
 
 <h2><a href="belchertown">Belchertown skin</a></h2>
@@ -60,5 +58,12 @@ Bootstrap with <a href="https://v0.lvcharts.com/">Live Charts</a>
 <h2><a href="Seasons">Seasons - the WeeWx standard skin</a></h2>
 <h2><a href="dokuwiki/sguweewx.html">SGC Weather Station skin</a></h2>
 </div>
+
+<table>
+<tr><td>WeeWX uptime</td><td>$station.uptime.long_form</td> </tr>
+<tr><td>Server uptime</td><td>$station.os_uptime.long_form</td></tr>
+<tr><td>Generated at</td><td>$current.dateTime</td></tr>
+</table>
+
 </body>
 </html>
