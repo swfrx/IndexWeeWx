@@ -53,16 +53,16 @@ class getData(SearchList):
         os.chdir( html_root )
 
         skin_list = ""
-
+        
 # Iterate over files in directory
         for dirname in os.listdir(html_root):
             logdbg( "dirname = %s" % dirname )
             if (dirname == "dokuwiki" ):
-                skin_list = skin_list + "<h4><a href='dokuwiki/sguweewx.html'>SGC Weather Station</a></h4>"
+                skin_list = os.linesep + skin_list + "<h4><a href='dokuwiki/sguweewx.html'>SGC Weather Station</a></h4>"
             else:
                 link = os.path.join(dirname, "index.html" )
                 if os.path.isfile( link ):
-                    skin_list = skin_list + "<h4><a href='" + dirname + "'>" + dirname.capitalize() + "</a></h4>"
+                    skin_list = os.linesep + skin_list + "<h4><a href='" + dirname + "'>" + dirname.capitalize() + "</a></h4>"
 
         # Finally, return our extension
         search_list_extension = { 'skin_list' : skin_list }
