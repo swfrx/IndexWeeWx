@@ -36,7 +36,7 @@ class IndexInstaller(ExtensionInstaller):
             files=[('bin/user', ['bin/user/index.py']),
                 ('skins/Index',
                  ['skins/Index/lang/en.conf',
-                  'skins/Index/dokuwiki/index.html.tmpl',
+                  'skins/Index/index.html.tmpl',
                   'skins/Index/skin.conf',
                   ]),
             ]
