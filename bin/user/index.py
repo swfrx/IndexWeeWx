@@ -5,7 +5,6 @@ Sally Woolrich, Januaty 2025    shunracats<at>gmail.com
 """
 
 import os
-import glob
 import weewx
 
 # Logging
@@ -53,16 +52,20 @@ class getData(SearchList):
         os.chdir( html_root )
 
         skin_list = ""
-        
+
 # Iterate over files in directory
-        for dirname in os.listdir(html_root):
+        items =  os.listdir(html_root)
+        items.sort(key=str.lower)
+        for dirname in items:
             logdbg( "dirname = %s" % dirname )
             if (dirname == "dokuwiki" ):
-                skin_list = os.linesep + skin_list + "<h4><a href='dokuwiki/sguweewx.html'>SGC Weather Station</a></h4>"
+                skin_list = skin_list + os.linesep + "<h4><a href='dokuwiki/sguweewx.html'>SGC Weather Station</a></h4>"
             else:
                 link = os.path.join(dirname, "index.html" )
                 if os.path.isfile( link ):
-                    skin_list = os.linesep + skin_list + "<h4><a href='" + dirname + "'>" + dirname.capitalize() + "</a></h4>"
+                    if ( dirname != "NewNeoWx" ):
+                        dirname = dirname.capitalize()
+                    skin_list = skin_list + os.linesep + "<h4><a href='" + dirname + "'>" + dirname + "</a></h4>"
 
         # Finally, return our extension
         search_list_extension = { 'skin_list' : skin_list }
