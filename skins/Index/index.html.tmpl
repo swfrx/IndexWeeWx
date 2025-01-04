@@ -4,9 +4,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head profile="http://www.w3.org/2005/10/profile">
     <title>$station.location</title>
-    <link rel="stylesheet" type="text/css" href="./Bootstrap/css/bootstrap.min.css" />
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          font-size: 14pt;
+          background-color: #ffffff;
+          padding:10px;
+        }
+        h1 {
+          font-size: 120%;
+        }
+        h2 {
+          font-size: 110%;
+        }
+        a:link {
+          text-decoration: underline;
+          color: #207070;
+        }
+        a:hover {
+          text-decoration: underline;
+          color: #30a0a0;
+        }
+        a:visited {
+          text-decoration: underline;
+          color: #207070;
+        }
+        table, td, th {
+          border: 1px solid;
+          border-collapse: collapse;
+          padding: 5px;
+        }
+    </style>
   </head>
-<body style="padding:10px">
 <div>
 <h1>Welcome to $station.location</h1>
 
@@ -17,6 +46,21 @@
 <p>The software is running several skins, some of which have Interactive charts.</p>
 
 $skin_list
+
+<table>
+  <tr>
+    <td>Generated on:</td>
+    <td>$current.dateTime.format(format_string="%d-%b-%Y at %H:%M%p")</td>
+  </tr>
+  <tr>
+    <td>WeeWx uptime:</td>
+    <td>$station.uptime.long_form</td>
+  </tr>
+  <tr>
+    <td>OS uptime:</td>
+    <td>$station.uptime.long_form</td>
+  </tr>
+</table>
 
 </div>
 </body>
