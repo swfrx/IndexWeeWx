@@ -1,15 +1,15 @@
 #errorCatcher Echo
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head profile="http://www.w3.org/2005/10/profile">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <title>$station.location</title>
     <style>
         body {
           font-family: Arial, sans-serif;
           font-size: 14pt;
           background-color: #ffffff;
-          padding:10px;
+          padding: 10px;
         }
         h1 {
           font-size: 120%;
@@ -17,15 +17,15 @@
         h2 {
           font-size: 110%;
         }
-        a:link {
+        alink {
           text-decoration: underline;
           color: #207070;
         }
-        a:hover {
+        ahover {
           text-decoration: underline;
           color: #30a0a0;
         }
-        a:visited {
+        avisited {
           text-decoration: underline;
           color: #207070;
         }
@@ -36,28 +36,37 @@
         }
     </style>
   </head>
+  <body>
 <div>
 <h1>Welcome to $station.location</h1>
-
-<p>This weather station uses <a href="https://weewx.com">WeeWX</a> software and is running version $station.version. </p>
-
-<p>The Weather Station is a <a href="https://www.foshk.com/wifi_weather_station/wh2650.html">FineOffset $station.hardware Clone</a>.</p>
-
-<p>The software is running several skins, some of which have Interactive charts.</p>
 
 $skin_list
 
 <table>
   <tr>
-    <td>Generated on:</td>
-    <td>$current.dateTime.format(format_string="%d-%b-%Y at %H:%M%p")</td>
+    <td>Software</td>
+    <td><a href="https//weewx.com">WeeWX v$station.version</a></td>
   </tr>
   <tr>
-    <td>WeeWx uptime:</td>
+    <td>Weather Station</td>
+    <td><a href="https//www.foshk.com/wifi_weather_station/wh2650.html">FineOffset $station.hardware Clone</a></td>
+  </tr>
+<!--
+  <tr>
+    <td>Station Type</td>
+    <td>$station.station_type</td>
+  </tr>
+-->
+  <tr>
+    <td>Generated on</td>
+    <td>$current.dateTime.format(format_string="%d-%b-%Y at %H%M%p")</td>
+  </tr>
+  <tr>
+    <td>WeeWx uptime</td>
     <td>$station.uptime.long_form</td>
   </tr>
   <tr>
-    <td>OS uptime:</td>
+    <td>OS uptime</td>
     <td>$station.uptime.long_form</td>
   </tr>
 </table>
