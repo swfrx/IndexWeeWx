@@ -5,7 +5,7 @@ from weecfg.extension import ExtensionInstaller
 
 #-------- extension info -----------
 
-VERSION      = "1.0"
+VERSION      = "2.4"
 NAME         = 'Index'
 DESCRIPTION  = 'Generates a basic index.html for my live & test systems based on directoris in HTML_ROOT containing index.html. At present DokuWiki is an exception.'
 AUTHOR       = "Sally Woolrich"
