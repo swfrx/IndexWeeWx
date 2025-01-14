@@ -25,7 +25,7 @@ def logerr(msg):
 from weewx.cheetahgenerator import SearchList
 
 # Print version in syslog for easier troubleshooting
-VERSION = "2.3"
+VERSION = "2.4"
 
 loginf("index.py Version %s" % VERSION)
 
